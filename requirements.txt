@@ -1,0 +1,9 @@
+# Core packages
+astropy
+matplotlib
+numpy
+scipy
+
+# For the docs
+sphinx
+python_docs_theme

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Categories=Development;
+Type=Application
+Icon=grand
+Exec=python3
+Name=python3
+Terminal=true
