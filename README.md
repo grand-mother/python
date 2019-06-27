@@ -21,6 +21,8 @@ packages.
 
 * **docs**: `sphinx` and `python_docs_theme`.
 
+* **typing**: `typing-extensions`.
+
 
 ## Downloads
 
