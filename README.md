@@ -26,7 +26,7 @@ packages.
 
 ## Downloads
 
-[![Python 3](https://img.shields.io/badge/python3-x86_64-blue.svg)](https://github.com/niess/linuxdeploy-plugin-python/releases/download/continuous/python3-x86_64.AppImage)
+[![Python 3](https://img.shields.io/badge/python3-x86_64-blue.svg)](https://github.com/grand-mother/python/releases/download/continuous/python3-x86_64.AppImage)
 
 
 [APPIMAGE]: https://appimage.org
