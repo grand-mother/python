@@ -35,13 +35,20 @@ pushd $BUILD_DIR
 
 
 # Build the AppImage
-linuxdeploy="linuxdeploy-${ARCH}.AppImage"
+linuxdeploy="linuxdeploy-centos6-${ARCH}.AppImage"
+appimage_plugin="linuxdeploy-plugin-appimage-${ARCH}.AppImage"
 plugin="linuxdeploy-plugin-python-${ARCH}.AppImage"
 
 if [ ! -f "${linuxdeploy}" ]; then
     url="https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous"
     wget --no-check-certificate -q "${url}/${linuxdeploy}"
     chmod u+x "${linuxdeploy}"
+fi
+
+if [ ! -f "${appimage_plugin}" ]; then
+    url="https://github.com/linuxdeploy/linuxdeploy-plugin-appimage/releases/download/continuous"
+    wget --no-check-certificate -q "${url}/${appimage_plugin}"
+    chmod u+x "${appimage_plugin}"
 fi
 
 if [ ! -f "${plugin}" ]; then
