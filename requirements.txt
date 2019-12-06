@@ -1,4 +1,7 @@
 # Core packages
+cffi
+
+# Scientific Python
 astropy
 matplotlib
 numpy

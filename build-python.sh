@@ -9,7 +9,7 @@ fi
 
 REPO_ROOT=$(readlink -f $(dirname "$0"))
 
-export PYTHON_VERSION="3.7.3"
+export PYTHON_VERSION="3.7.5"
 export PYTHON_SOURCE="${PYTHON_SOURCE:-https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz}"
 export PIP_REQUIREMENTS="-U pip -r ${REPO_ROOT}/requirements.txt"
 
@@ -35,7 +35,7 @@ pushd $BUILD_DIR
 
 
 # Build the AppImage
-linuxdeploy="linuxdeploy-centos6-${ARCH}.AppImage"
+linuxdeploy="linuxdeploy-${ARCH}.AppImage"
 appimage_plugin="linuxdeploy-plugin-appimage-${ARCH}.AppImage"
 plugin="linuxdeploy-plugin-python-${ARCH}.AppImage"
 
