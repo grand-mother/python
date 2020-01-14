@@ -1,6 +1,7 @@
 # Core packages
 cffi
 h5py
+tqdm
 
 # Scientific Python
 astropy

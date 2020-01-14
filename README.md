@@ -17,9 +17,11 @@ chmod u+x python3-x86_64.AppImage
 The [AppImage][APPIMAGE] bundles Python `3.7.3` with the following site
 packages.
 
-* **core**: `astropy`, `matplotlib`, `numpy` and `scipy`.
+- **core**: `cffi`, `h5py` and `tqdm`.
 
 * **docs**: `sphinx` and `python_docs_theme`.
+
+* **scientific**: `astropy`, `matplotlib`, `numpy` and `scipy`.
 
 * **typing**: `typing-extensions`.
 
