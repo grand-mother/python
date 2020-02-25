@@ -14,7 +14,7 @@ chmod u+x python3-x86_64.AppImage
 
 ## Content
 
-The [AppImage][APPIMAGE] bundles Python `3.7.3` with the following site
+The [AppImage][APPIMAGE] bundles Python `3.8` with the following site
 packages.
 
 - **core**: `cffi`, `h5py` and `tqdm`.
