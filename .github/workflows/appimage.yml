@@ -1,0 +1,44 @@
+name: AppImage
+on: [push, pull_request]
+
+jobs:
+  Generate:
+    runs-on: ubuntu-latest
+    env:
+      MANYLINUX_TAG: 2010
+      PYTHON_TAG: cp38-cp38
+      PYTHON_VERSION: 3.8
+      PYTHON_FULLVERSION: 3.8.2
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build
+      run: |
+        # Get the base Python AppImage
+        baseurl=https://github.com/niess/python-appimage/releases/download
+        gittag=python-${PYTHON_TAG}-manylinux${MANYLINUX_TAG}_x86_64
+        python_appimage=python${PYTHON_FULLVERSION}-${PYTHON_TAG}-manylinux${MANYLINUX_TAG}_x86_64.AppImage
+        wget -q "${baseurl}/${gittag}/${python_appimage}"
+        chmod u+x "${python_appimage}"
+
+        # Install GRAND specific dependencies
+        ./${python_appimage} --appimage-extract
+        python=squashfs-root/AppRun
+        ${python} -m pip install --no-warn-script-location -U pip
+        ${python} -m pip install --no-warn-script-location -r requirements.txt
+
+        # Re-build the modified AppImage
+        appimagetool=appimagetool-x86_64.AppImage
+        baseurl=https://github.com/AppImage/AppImageKit/releases/download/continuous
+        wget -q "${baseurl}/${appimagetool}"
+        chmod u+x "${appimagetool}"
+        ./${appimagetool} "squashfs-root" "python3-x86_64.AppImage"
+
+    - name: Release
+      uses: marvinpinto/action-automatic-releases@latest
+      with:
+        automatic_release_tag: continuous
+        title: Continuous build
+        files: python3-x86_64.AppImage
+        repo_token: ${{ secrets.GITHUB_TOKEN }}

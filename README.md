@@ -1,4 +1,4 @@
-# GRAND's Python [![Build Status](https://travis-ci.com/grand-mother/python.svg?branch=master)](https://travis-ci.com/grand-mother/python)
+# GRAND's Python [![AppImage](https://github.com/grand-mother/python/workflows/AppImage/badge.svg)](https://github.com/grand-mother/python/actions)
 _Contained, portable and modern python for GRAND running from an AppImage_
 
 
@@ -32,7 +32,5 @@ packages.
 
 
 [APPIMAGE]: https://appimage.org
-[LINUXDEPLOY]: https://github.com/linuxdeploy/linuxdeploy
-[PYPI]: https://pypi.org
 [PYTHON]: https://www.python.org
 [RELEASE]: https://github.com/grand-mother/python/releases
