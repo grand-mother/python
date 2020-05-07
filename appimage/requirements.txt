@@ -1,15 +1,20 @@
 # Core packages
 cffi
 h5py
+pyyaml
 tqdm
 
 # Scientific Python
 astropy
+grand
+ipython
 matplotlib
 numpy
+pandas
 scipy
+sympy
 
-# For the docs
+# For docs
 sphinx
 python_docs_theme
 

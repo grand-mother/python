@@ -7,30 +7,24 @@ _Contained, portable and modern python for GRAND running from an AppImage_
 A ready to use [AppImage][APPIMAGE] distribution of [Python][PYTHON] is provided
 [below](##Downloads) or in the [release][RELEASE] area. You can try it E.g. as:
 ```
-wget -cq https://github.com/grand-mother/python/releases/download/continuous/python3-x86_64.AppImage
-chmod u+x python3-x86_64.AppImage
-./python3-x86_64.AppImage
+wget -cq https://github.com/grand-mother/python/releases/download/continuous/grand-python-x86_64.AppImage
+chmod +x grand-python-x86_64.AppImage
+./grand-python-x86_64.AppImage
 ```
 
 ## Content
 
-The [AppImage][APPIMAGE] bundles Python `3.8` with the following site
-packages.
-
-- **core**: `cffi`, `h5py` and `tqdm`.
-
-* **docs**: `sphinx` and `python_docs_theme`.
-
-* **scientific**: `astropy`, `matplotlib`, `numpy` and `scipy`.
-
-* **typing**: `typing-extensions`.
+The [AppImage][APPIMAGE] bundles Python `3.8` as well as extra site packages
+for GRAND, e.g. the [`grand`][GRAND_PKG] package and the scipy suite. See the
+[requirements.txt](appimage/requirements.txt) file for a detailed list.
 
 
 ## Downloads
 
-[![Python 3](https://img.shields.io/badge/python3-x86_64-blue.svg)](https://github.com/grand-mother/python/releases/download/continuous/python3-x86_64.AppImage)
+[![GRAND Python](https://img.shields.io/badge/python-x86_64-blue.svg)](https://github.com/grand-mother/python/releases/download/continuous/grand-python-x86_64.AppImage)
 
 
 [APPIMAGE]: https://appimage.org
+[GRAND_PKG]: https://pypi.org/project/grand
 [PYTHON]: https://www.python.org
 [RELEASE]: https://github.com/grand-mother/python/releases

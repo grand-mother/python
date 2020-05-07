@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+    <id>scipy</id>
+    <metadata_license>MIT</metadata_license>
+    <project_license>Python-2.0</project_license>
+    <name>Scipy</name>
+    <summary>A Python {{ python-fullversion }} runtime for GRAND</summary>
+    <description>
+        <p>  A relocated Python {{ python-fullversion }} installation for
+             GRAND running from an AppImage. It includes {{ requirements }}.
+        </p>
+    </description>
+    <launchable type="desktop-id">grand-python.desktop</launchable>
+    <url type="homepage">http://grand.cnrs.fr</url>
+    <provides>
+        <binary>python{{ python-version }}</binary>
+    </provides>
+</component>

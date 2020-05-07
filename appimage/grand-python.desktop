@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=grand-python
+Exec=grand-python
+Comment=A Python {{ python-fullversion }} runtime for GRAND
+Icon=grand-python
+Categories=Science;
+Terminal=true
